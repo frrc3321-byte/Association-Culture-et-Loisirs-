@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17342d;
+  background: #f7f5ef;
+  line-height: 1.6;
+}
+
+header {
+  min-height: 78vh;
+  color: white;
+  background: linear-gradient(135deg, #174d42, #2e7764);
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+.hero {
+  max-width: 900px;
+  margin: 100px auto 0;
+  padding: 0 22px 80px;
+}
+
+.hero p:first-child,
+.titre {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.82rem;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  line-height: 1.03;
+  margin: 18px 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+}
+
+.bouton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: #f2c76e;
+  color: #17342d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 22px;
+}
+
+section h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  margin: 8px 0 30px;
+}
+
+#presentation {
+  font-size: 1.1rem;
+}
+
+#presentation p:not(.titre) {
+  max-width: 800px;
+}
+
+.activites {
+  max-width: none;
+  background: #e8eee9;
+  text-align: center;
+}
+
+.cartes {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.carte {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(23, 52, 45, 0.08);
+}
+
+.carte:hover {
+  transform: translateY(-5px);
+}
+
+.icone {
+  font-size: 2.4rem;
+}
+
+.carte h3 {
+  font-size: 1.35rem;
+}
+
+.contact {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 20px 0;
+  box-shadow: 0 8px 30px rgba(23, 52, 45, 0.08);
+}
+
+.contact a {
+  color: #236b5a;
+  font-weight: bold;
+}
+
+.petit {
+  font-size: 0.9rem;
+  color: #66756f;
+}
+
+footer {
+  text-align: center;
+  padding: 28px 20px;
+  background: #17342d;
+  color: white;
+}
+
+@media (max-width: 800px) {
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    margin-top: 60px;
+  }
+
+  .cartes {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 520px) {
+
+  .cartes {
+    grid-template-columns: 1fr;
+  }
+}
